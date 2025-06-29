@@ -43,19 +43,20 @@ Shard sistemi sayesinde bot büyük sunucularda performanslı çalışır. Disco
 ```js
 Discord-V14/
 │
-├── bot/
-│   ├── commands/        # Normal prefix komutları (varsa)
-│   ├── events/          # Event dosyaları
-│   ├── slashCommands/   # Slash komutları buraya
+├── bot/                 # Botun ana çalışma klasörü
+│   ├── commands/        # Prefix (örneğin ".komut") ile çalışan komut dosyaları
+│   ├── events/          # Discord eventlerini (örneğin messageCreate, ready) içeren dosyalar
+│   ├── slashCommands/   # Slash komutları ("/komut") burada yer alır
 │
-├── global/
-│   ├── Assets/
-│   ├── Config/
-│   ├── Database/
-│   ├── Handler/         # Komut ve event yükleyici burada olacak
-│   ├── Structures/
+├── global/              # Proje genelinde kullanılan dosyalar ve yapılar
+│   ├── Assets/          # Yazı tipleri, resimler, ikonlar ve diğer statik medya dosyaları
+│   ├── Config/          # Bot ayarları, token, ID gibi yapılandırma dosyaları
+│   ├── Database/        # MongoDB modelleri veya başka veri tabanı dosyaları
+│   ├── Handler/         # Komut, event ve slash command yükleyici (handler) sistemleri
+│   ├── Structures/      # Özel Client sınıfı (CustomClient.js) ve diğer özel yapılar
 │
-├── shard.js
-├── moduleStart.bat
-└── package.json
+├── shard.js             # Botun shard işlemini başlatan ana dosya
+├── moduleStart.bat      # Gerekli modülleri otomatik kurmak için script dosyası
+└── package.json         # Projenin bağımlılıklarını ve scriptlerini tanımlayan dosya
+
 ```
