@@ -44,17 +44,18 @@ Shard sistemi sayesinde bot büyük sunucularda performanslı çalışır. Disco
 Discord-V14/
 │
 ├── bot/
-│   ├── commands/        # Komutlar
-│   ├── events/          # Eventler
+│   ├── commands/        # Normal prefix komutları (varsa)
+│   ├── events/          # Event dosyaları
+│   ├── slashCommands/   # Slash komutları buraya
 │
 ├── global/
-│   ├── Assets/          # Yazı tipleri, resimler, statik dosyalar
-│   ├── Config/          # Ayar dosyaları
-│   ├── Database/        # Database model dosyaları
-│   ├── Handler/         # Handler sistemleri (komut, event yükleyici vs.)
-│   ├── Structures/      # CustomClient.js (client)
+│   ├── Assets/
+│   ├── Config/
+│   ├── Database/
+│   ├── Handler/         # Komut ve event yükleyici burada olacak
+│   ├── Structures/
 │
-├── shard.js             # Shard başlatıcı
-├── moduleStart.bat      # Otomatik modül kurulum scripti
+├── shard.js
+├── moduleStart.bat
 └── package.json
 ```
